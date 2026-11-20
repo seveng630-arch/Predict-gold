@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e14" />
+    <meta name="description" content="Terminal analisis emas global dan lokal Indonesia dengan simulasi multi-horizon." />
+    <title>PredictGoldDelano — Gold Intelligence Terminal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lightweight-charts@4.2.3/dist/lightweight-charts.standalone.production.js" defer></script>
+    <script type="module" src="chart-ui.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="PredictGoldDelano beranda">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-name">Predict<span>Gold</span>Delano</span>
+          <span class="live-badge" id="feed-status"><i></i><span>MENYIAPKAN</span></span>
+        </a>
+        <div class="topbar-right">
+          <span class="clock-label">WIB <b class="mono" id="wib-clock">--:--:--</b></span>
+          <button class="button button-quiet button-compact" id="open-price-modal" type="button"><span class="button-icon">＋</span> Input Harga Antam Pagi</button>
+          <button class="icon-button" id="refresh-button" aria-label="Muat ulang data" title="Muat ulang data" type="button">↻</button>
+        </div>
+      </header>
+
+      <section class="market-strip" aria-label="Ticker lintas pasar">
+        <div class="market-item"><span class="market-label">USD / IDR</span><strong class="mono" id="ticker-fx">–</strong><span class="ticker-change neutral" id="ticker-fx-change">kurs</span></div>
+        <div class="market-item"><span class="market-label">DXY INDEX</span><strong class="mono" id="ticker-dxy">–</strong><span class="ticker-change neutral" id="ticker-dxy-change">USD</span></div>
+        <div class="market-item"><span class="market-label">WTI OIL</span><strong class="mono" id="ticker-wti">–</strong><span class="ticker-change neutral" id="ticker-wti-change">$/bbl</span></div>
+        <div class="market-item"><span class="market-label">SILVER</span><strong class="mono" id="ticker-silver">–</strong><span class="ticker-change neutral" id="ticker-silver-change">XAG/USD</span></div>
+        <div class="market-item"><span class="market-label">US 10Y YIELD</span><strong class="mono" id="ticker-yield">–</strong><span class="ticker-change neutral" id="ticker-yield-change">yield</span></div>
+        <div class="strip-source" id="ticker-source">menunggu sumber data</div>
+      </section>
+
+      <main id="top">
+        <section class="instrument-head panel">
+          <div class="instrument-selector" role="tablist" aria-label="Pilih instrumen">
+            <button class="instrument-tab active" role="tab" aria-selected="true" data-instrument="spot" type="button">XAU/USD <span>Spot Dunia</span></button>
+            <button class="instrument-tab" role="tab" aria-selected="false" data-instrument="antam" type="button">Emas Antam <span>LM · 24K</span></button>
+            <button class="instrument-tab" role="tab" aria-selected="false" data-instrument="local" type="button">Emas 24K Lokal <span>UBS / Galeri24</span></button>
+          </div>
+          <div class="instrument-summary">
+            <div class="instrument-price-block">
+              <div class="eyebrow" id="instrument-caption">HARGA SPOT · PER TROY OUNCE</div>
+              <div class="price-line"><strong class="mono" id="current-price">–</strong><span class="price-unit" id="price-unit">USD/oz</span><span class="price-change mono" id="price-change">–</span></div>
+              <div class="instrument-subline"><span class="status-dot"></span><span id="instrument-subline">PAXG / USD · harga spot terindikasi</span><span class="subline-divider">·</span><span id="last-updated">Memuat data…</span></div>
+            </div>
+            <div class="instrument-stats">
+              <div><span>High 24J</span><b class="mono" id="high-24h">–</b></div>
+              <div><span>Low 24J</span><b class="mono" id="low-24h">–</b></div>
+              <div><span>ATR 14</span><b class="mono" id="atr-stat">–</b></div>
+              <div><span>Volatilitas</span><b class="mono" id="vol-stat">–</b></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="insight-grid" aria-label="Intelijen pasar lokal">
+          <article class="metric-card panel">
+            <div class="metric-top"><span>ESTIMATOR ANTAM BESOK</span><span class="metric-icon gold-icon">↗</span></div>
+            <div class="metric-value mono" id="tomorrow-estimate">–</div>
+            <div class="metric-foot"><span id="tomorrow-change" class="positive">–</span><span>estimasi harga jual / gram</span></div>
+          </article>
+          <article class="metric-card panel">
+            <div class="metric-top"><span>PREMI ANTAM / SPOT</span><span class="metric-icon purple-icon">◎</span></div>
+            <div class="metric-value mono" id="premium-value">–</div>
+            <div class="metric-foot"><span id="premium-status" class="neutral">–</span><span id="spot-idr-label">spot lokal / gram –</span></div>
+          </article>
+          <article class="metric-card panel">
+            <div class="metric-top"><span>BREAK-EVEN ESTIMASI</span><span class="metric-icon blue-icon">⌁</span></div>
+            <div class="metric-value mono" id="breakeven-days">–</div>
+            <div class="metric-foot"><span id="breakeven-spread" class="neutral">Spread –</span><span>berdasarkan laju tren</span></div>
+          </article>
+          <article class="metric-card panel metric-price-card">
+            <div class="metric-top"><span>HARGA FISIK INDONESIA</span><span class="price-source-label" id="antam-source-label">ESTIMASI</span><span class="metric-icon green-icon">▤</span></div>
+            <div class="local-prices">
+              <div><span>Antam jual</span><b class="mono" id="antam-sell">–</b></div>
+              <div><span>Buyback</span><b class="mono" id="antam-buyback">–</b></div>
+            </div>
+          </article>
+        </section>
+
+        <div class="main-grid">
+          <div class="primary-column">
+            <section class="panel chart-panel">
+              <div class="panel-heading chart-heading">
+                <div><div class="section-kicker">PRICE ACTION</div><h2>Grafik pasar</h2></div>
+                <div class="chart-heading-right"><span class="chart-legend-item"><i class="legend-dot gold"></i>Harga</span><span class="chart-period" id="chart-period-label">1 jam · 200 candle</span></div>
+              </div>
+              <div class="chart-toolbar">
+                <div class="segmented" role="group" aria-label="Jenis grafik">
+                  <button class="chart-type active" data-chart-type="candles" type="button">Candlestick</button>
+                  <button class="chart-type" data-chart-type="line" type="button">Line</button>
+                </div>
+                <div class="timeframes" role="group" aria-label="Timeframe grafik">
+                  <button class="timeframe" data-timeframe="15m" type="button">15m</button>
+                  <button class="timeframe active" data-timeframe="1h" type="button">1H</button>
+                  <button class="timeframe" data-timeframe="4h" type="button">4H</button>
+                  <button class="timeframe" data-timeframe="1d" type="button">1D</button>
+                  <button class="timeframe" data-timeframe="1w" type="button">1W</button>
+                </div>
+                <button class="button button-quiet button-compact indicator-toggle" id="indicator-toggle" type="button" aria-expanded="false">Indikator <span>⌄</span></button>
+              </div>
+              <div class="indicator-chips" id="indicator-chips" hidden>
+                <span class="chips-label">OVERLAY</span>
+                <label><input type="checkbox" data-indicator="ema9" /><i class="chip-line ema9-line"></i>EMA 9</label>
+                <label><input type="checkbox" data-indicator="ema21" checked /><i class="chip-line ema21-line"></i>EMA 21</label>
+                <label><input type="checkbox" data-indicator="ema50" /><i class="chip-line ema50-line"></i>EMA 50</label>
+                <label><input type="checkbox" data-indicator="ema200" /><i class="chip-line ema200-line"></i>EMA 200</label>
+                <label><input type="checkbox" data-indicator="bollinger" /><i class="chip-line bb-line"></i>Bollinger</label>
+                <span class="chips-separator"></span>
+                <div class="segmented mini-segmented" role="group" aria-label="Indikator momentum">
+                  <button class="momentum-tab active" data-momentum="rsi" type="button">RSI 14</button>
+                  <button class="momentum-tab" data-momentum="macd" type="button">MACD</button>
+                </div>
+              </div>
+              <div class="chart-stage">
+                <div id="price-chart" class="price-chart" aria-label="Grafik harga emas"></div>
+                <div id="news-overlay" class="news-overlay" aria-label="Penanda berita mendatang"></div>
+                <div id="chart-tooltip" class="chart-tooltip" hidden></div>
+              </div>
+              <div class="chart-footer"><span><i class="footer-dot live-dot"></i><span id="chart-feed-label">data pasar</span></span><span><i class="footer-dot news-dot"></i>Penanda berita WIB</span><span id="chart-library-note">Charts powered by Lightweight Charts</span></div>
+              <div class="indicator-stage"><div class="indicator-title"><span id="indicator-name">RSI (14)</span><span class="mono" id="indicator-value">–</span></div><div id="indicator-chart" class="indicator-chart"></div></div>
+            </section>
+
+            <section class="panel forecast-panel">
+              <div class="panel-heading forecast-heading">
+                <div><div class="section-kicker">SIMULASI PROBABILITAS · 1.000 ITERASI</div><h2>Proyeksi multi-horizon</h2></div>
+                <div class="forecast-model"><span class="model-pulse"></span>Monte Carlo + GARCH (1,1)</div>
+              </div>
+              <div class="horizon-tabs" role="tablist" aria-label="Pilih horizon prediksi">
+                <button class="horizon-tab active" data-horizon="24h" type="button">24 Jam</button>
+                <button class="horizon-tab" data-horizon="72h" type="button">72 Jam</button>
+                <button class="horizon-tab" data-horizon="7d" type="button">7 Hari</button>
+                <button class="horizon-tab" data-horizon="3m" type="button">3 Bulan</button>
+                <button class="horizon-tab" data-horizon="6m" type="button">6 Bulan</button>
+                <button class="horizon-tab" data-horizon="12m" type="button">12 Bulan</button>
+              </div>
+              <div class="forecast-layout">
+                <div class="fan-chart-wrap"><div class="fan-legend"><span><i class="fan-key fan-90"></i>P90 Optimistis</span><span><i class="fan-key fan-50"></i>P50 Moderat</span><span><i class="fan-key fan-10"></i>P10 Pesimistis</span></div><svg id="fan-chart" class="fan-chart" viewBox="0 0 640 208" role="img" aria-label="Kurva kipas proyeksi harga"></svg><div class="fan-axis"><span>Sekarang</span><span id="fan-end-label">24 jam</span></div></div>
+                <div class="forecast-summary">
+                  <div class="forecast-center-label">TARGET MODERAT · P50</div>
+                  <div class="forecast-target mono" id="forecast-target">–</div>
+                  <div class="forecast-range"><span class="range-down">P10 <b class="mono" id="forecast-p10">–</b></span><span class="range-up">P90 <b class="mono" id="forecast-p90">–</b></span></div>
+                  <div class="forecast-stats"><div><span>Skor arah</span><b class="mono" id="forecast-direction">–</b></div><div><span>MAPE / RMSE</span><b class="mono" id="forecast-accuracy">–</b></div><div><span>Model</span><b id="forecast-model-label">Monte Carlo</b></div></div>
+                </div>
+              </div>
+              <p class="panel-note">Rentang probabilitas berbasis data historis dan asumsi volatilitas. Proyeksi bukan jaminan hasil harga.</p>
+            </section>
+
+            <section class="panel calendar-panel">
+              <div class="panel-heading"><div><div class="section-kicker">WIB · 7 HARI KE DEPAN</div><h2>Radar berita ekonomi</h2></div><span class="calendar-demo-tag"><i></i>Jadwal contoh</span></div>
+              <div id="event-list" class="event-list"></div>
+              <p class="panel-note">Kalender di bawah adalah jadwal contoh untuk demonstrasi penanda risiko. Verifikasi jadwal aktual sebelum mengambil keputusan.</p>
+            </section>
+          </div>
+
+          <aside class="side-column">
+            <section class="panel decision-panel">
+              <div class="panel-heading decision-heading"><div><div class="section-kicker">RINGKASAN KUANTITATIF</div><h2>Kesimpulan besok</h2></div><span class="decision-status" id="decision-status">ANALISIS</span></div>
+              <div class="gauge-wrap">
+                <svg class="gauge" viewBox="0 0 240 148" role="img" aria-label="AI Confluence Gauge"><path class="gauge-track" d="M 30 126 A 90 90 0 0 1 210 126" pathLength="100" /><path class="gauge-progress" id="gauge-progress" d="M 30 126 A 90 90 0 0 1 210 126" pathLength="100" /><line class="gauge-needle" id="gauge-needle" x1="120" y1="126" x2="120" y2="50" /><circle class="gauge-hub" cx="120" cy="126" r="6" /></svg>
+                <div class="gauge-center"><b class="mono" id="gauge-score">–</b><span>CONFLUENCE</span></div>
+                <div class="gauge-labels"><span>Bearish</span><span>Netral</span><span>Bullish</span></div>
+              </div>
+              <div class="decision-pill defensive" id="decision-pill"><span class="decision-dot"></span><span id="decision-mode">Memuat strategi</span></div>
+              <div class="decision-copy" id="decision-copy">Menunggu data pasar dan kalender risiko.</div>
+              <div class="allocation-box"><div><span>Alokasi simulasi</span><b class="mono" id="allocation-value">–</b></div><div class="allocation-track"><i id="allocation-bar"></i></div><small id="allocation-guidance">—</small></div>
+              <div class="safe-zone"><div><span>SAFE BUY ZONE</span><b class="mono" id="safe-zone-price">–</b></div><div class="safe-zone-sub"><span id="safe-zone-distance">–</span><span id="safe-zone-source">Monte Carlo P10</span></div></div>
+              <div class="score-breakdown">
+                <div class="breakdown-title">PILAR CONFLUENCE <span>BOBOT</span></div>
+                <div class="score-row"><span>Teknikal</span><div class="score-track"><i id="score-tech-bar"></i></div><b class="mono" id="score-tech">–</b><small>25%</small></div>
+                <div class="score-row"><span>Volatilitas</span><div class="score-track"><i id="score-vol-bar"></i></div><b class="mono" id="score-vol">–</b><small>25%</small></div>
+                <div class="score-row"><span>Makro lintas pasar</span><div class="score-track"><i id="score-macro-bar"></i></div><b class="mono" id="score-macro">–</b><small>30%</small></div>
+                <div class="score-row"><span>Risiko kalender</span><div class="score-track"><i id="score-calendar-bar"></i></div><b class="mono" id="score-calendar">–</b><small>20%</small></div>
+              </div>
+              <button class="button button-outline button-full" id="open-simulator" type="button">Buka simulasi What‑If <span>↗</span></button>
+            </section>
+
+            <section class="panel simulator-panel" id="simulator-panel">
+              <div class="panel-heading"><div><div class="section-kicker">SIMULATOR</div><h2>What‑If</h2></div><span class="simulator-icon">⌁</span></div>
+              <div class="slider-label"><label for="fx-slider">Skenario kurs USD/IDR</label><b class="mono" id="fx-slider-value">–</b></div>
+              <input id="fx-slider" type="range" min="14500" max="18500" step="50" value="16500" />
+              <div class="slider-scale"><span id="fx-slider-min">14.500</span><span id="fx-slider-max">18.500</span></div>
+              <div class="scenario-label">HASIL BERITA BESOK</div>
+              <div class="scenario-options" role="group" aria-label="Skenario hasil berita">
+                <button data-scenario="positive" type="button"><i class="scenario-icon positive-icon">↗</i>Positif</button>
+                <button class="selected" data-scenario="neutral" type="button"><i class="scenario-icon neutral-icon">—</i>Netral</button>
+                <button data-scenario="bad" type="button"><i class="scenario-icon bad-icon">↘</i>Buruk</button>
+              </div>
+              <div class="sim-result"><div><span>Skor simulasi</span><b class="mono" id="sim-score">–</b></div><div><span>Risiko drawdown</span><b class="mono negative" id="sim-drawdown">–</b></div></div>
+              <div class="sim-footnote" id="sim-footnote">Geser kurs atau ubah skenario berita untuk melihat dampak.</div>
+            </section>
+
+            <section class="panel method-panel"><div class="method-icon">✳</div><div><b>Transparansi model</b><p>Skor dan proyeksi dihitung di browser dari harga historis dan asumsi statistik. Feed bisa beralih ke data simulasi saat sumber publik tidak tersedia.</p><button type="button" id="source-details">Sumber data & asumsi <span>↗</span></button></div></section>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="app-footer"><div class="footer-brand"><span class="brand-mark small" aria-hidden="true"><span></span><span></span><span></span></span>PredictGoldDelano</div><div class="footer-data" id="footer-source">Data publik · mode client-side</div><div class="footer-disclaimer">Bukan saran investasi. Simulasi tidak menjamin kinerja masa depan.</div></footer>
+    </div>
+
+    <dialog class="price-dialog" id="price-dialog">
+      <form method="dialog" id="price-form">
+        <div class="dialog-top"><div><div class="section-kicker">INPUT MANUAL · WIB 08.30</div><h2>Harga Antam resmi</h2></div><button class="icon-button dialog-close" aria-label="Tutup" value="cancel">×</button></div>
+        <p class="dialog-copy">Simpan harga jual dan buyback resmi hari ini di perangkat ini. Nilai manual menggantikan estimasi harga Antam pada terminal.</p>
+        <label class="field-label" for="sell-input">Harga jual per gram (IDR)</label><div class="input-wrap"><span>Rp</span><input id="sell-input" name="sell" inputmode="numeric" type="number" min="1" placeholder="Contoh: 1.850.000" /></div>
+        <label class="field-label" for="buyback-input">Harga buyback per gram (IDR)</label><div class="input-wrap"><span>Rp</span><input id="buyback-input" name="buyback" inputmode="numeric" type="number" min="1" placeholder="Contoh: 1.720.000" /></div>
+        <div class="dialog-actions"><button class="button button-quiet" id="clear-override" type="button">Hapus input</button><button class="button button-primary" id="save-override" type="submit" value="save">Simpan harga</button></div>
+        <small class="dialog-storage"><span>▣</span> Disimpan lokal di browser ini.</small>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <noscript>PredictGoldDelano membutuhkan JavaScript untuk memuat grafik dan simulasi.</noscript>
+  </body>
+</html>
