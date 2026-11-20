@@ -1,10 +1,10 @@
 {
-  "updatedAtWib": "2026-11-20 21:32:00 WIB",
-  "timestamp": 1795185120,
+  "updatedAtWib": "2026-11-21 01:32:12 WIB",
+  "timestamp": 1795199532,
   "spot": {
-    "price": 3581.2,
-    "changePct": -13.55,
-    "high": 3693.8,
+    "price": 3525.0,
+    "changePct": -14.91,
+    "high": 3674.6,
     "low": 3514.9,
     "source": "GitHub Actions \u00b7 Live Market Feed"
   },
@@ -14,70 +14,38 @@
     "source": "USD/IDR Otomatis"
   },
   "antam": {
-    "date": "2026-11-20",
-    "sell": 2467000,
-    "buyback": 2319000,
-    "prevDaySell": 2466000,
-    "changeIdr": 1000,
-    "changePct": 0.04,
-    "spotIdrGram": 2090679.0,
+    "date": "2026-11-21",
+    "sell": 2428000,
+    "buyback": 2283000,
+    "prevDaySell": 2467000,
+    "changeIdr": -39000,
+    "changePct": -1.58,
+    "spotIdrGram": 2057870.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
     "dxy": {
-      "price": 103.69,
-      "changePct": 0.14,
+      "price": 103.83,
+      "changePct": 0.27,
       "suffix": "pts"
     },
     "wti": {
-      "price": 81.96,
-      "changePct": -4.39,
+      "price": 82.96,
+      "changePct": -3.22,
       "suffix": "$/bbl"
     },
     "silver": {
-      "price": 42.06,
-      "changePct": -10.1,
+      "price": 41.05,
+      "changePct": -12.26,
       "suffix": "$/oz"
     },
     "yield": {
-      "price": 4.99,
-      "changePct": -2.64,
+      "price": 4.94,
+      "changePct": -3.57,
       "suffix": "%"
     }
   },
   "candles1h": [
-    {
-      "time": 1794272400,
-      "open": 4133.1,
-      "high": 4150.7,
-      "low": 4131.2,
-      "close": 4137.7,
-      "volume": 5014.0
-    },
-    {
-      "time": 1794276000,
-      "open": 4136.6,
-      "high": 4136.9,
-      "low": 4119.3,
-      "close": 4120.9,
-      "volume": 5222.0
-    },
-    {
-      "time": 1794279600,
-      "open": 4120.8,
-      "high": 4126.6,
-      "low": 4117.2,
-      "close": 4120.2,
-      "volume": 2700.0
-    },
-    {
-      "time": 1794283200,
-      "open": 4120.0,
-      "high": 4126.7,
-      "low": 4117.3,
-      "close": 4124.9,
-      "volume": 2577.0
-    },
     {
       "time": 1794286800,
       "open": 4124.1,
@@ -1635,15 +1603,47 @@
       "open": 3572.7,
       "high": 3582.8,
       "low": 3563.8,
-      "close": 3581.2,
-      "volume": 7578.0
+      "close": 3578.9,
+      "volume": 21149.0
     },
     {
-      "time": 1795184517,
-      "open": 3581.2,
-      "high": 3581.2,
-      "low": 3581.2,
-      "close": 3581.2,
+      "time": 1795186800,
+      "open": 3579.3,
+      "high": 3587.0,
+      "low": 3527.7,
+      "close": 3551.9,
+      "volume": 30323.0
+    },
+    {
+      "time": 1795190400,
+      "open": 3551.7,
+      "high": 3558.8,
+      "low": 3535.9,
+      "close": 3547.5,
+      "volume": 17017.0
+    },
+    {
+      "time": 1795194000,
+      "open": 3547.3,
+      "high": 3547.3,
+      "low": 3521.2,
+      "close": 3531.7,
+      "volume": 12320.0
+    },
+    {
+      "time": 1795197600,
+      "open": 3530.6,
+      "high": 3532.2,
+      "low": 3520.1,
+      "close": 3525.6,
+      "volume": 6038.0
+    },
+    {
+      "time": 1795198931,
+      "open": 3525.0,
+      "high": 3525.0,
+      "low": 3525.0,
+      "close": 3525.0,
       "volume": 0.0
     }
   ],
@@ -3245,8 +3245,8 @@
       "open": 3633.8,
       "high": 3638.1,
       "low": 3515.0,
-      "close": 3581.2,
-      "volume": 202519.0
+      "close": 3525.0,
+      "volume": 281724.0
     }
   ],
   "antamHistory": [
@@ -3267,6 +3267,12 @@
       "sell": 2467000,
       "buyback": 2319000,
       "spotIdrGram": 2090679.0
+    },
+    {
+      "time": 1795199532,
+      "sell": 2428000,
+      "buyback": 2283000,
+      "spotIdrGram": 2057870.0
     }
   ],
   "events": [
