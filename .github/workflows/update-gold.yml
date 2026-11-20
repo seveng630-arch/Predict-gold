@@ -14,15 +14,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Jalankan Scraper Harga Emas, Candle & News
-        run: python scripts/fetch_gold.py
+        run: |
+          if [ -f "scripts/fetch_gold.py" ]; then
+            python scripts/fetch_gold.py
+          elif [ -f "fetch_gold.py" ]; then
+            python fetch_gold.py
+          else
+            echo "File fetch_gold.py tidak ditemukan. Daftar file di repo:"
+            ls -la
+            exit 1
+          fi
 
       - name: Simpan market_data.json ke GitHub
         run: |
