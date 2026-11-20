@@ -1,0 +1,33 @@
+name: Update Harga Emas & News Otomatis (6x Sehari)
+
+on:
+  schedule:
+    # Berjalan setiap 4 jam (UTC) = 08:40, 12:40, 16:40, 20:40, 00:40, 04:40 WIB
+    - cron: '40 1,5,9,13,17,21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Jalankan Scraper Harga Emas, Candle & News
+        run: python scripts/fetch_gold.py
+
+      - name: Simpan market_data.json ke GitHub
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/market_data.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update harga emas, antam & news otomatis"
+          git push
