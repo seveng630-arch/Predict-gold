@@ -1,6 +1,6 @@
 {
-  "updatedAtWib": "2026-11-21 13:31:33 WIB",
-  "timestamp": 1795242693,
+  "updatedAtWib": "2026-11-21 17:25:16 WIB",
+  "timestamp": 1795256716,
   "spot": {
     "price": 3515.4,
     "changePct": -15.29,
@@ -1643,7 +1643,7 @@
       "open": 3526.4,
       "high": 3544.3,
       "low": 3514.6,
-      "close": 3539.0,
+      "close": 3515.4,
       "volume": 5185.0
     }
   ],
@@ -3288,6 +3288,12 @@
     },
     {
       "time": 1795242693,
+      "sell": 2435000,
+      "buyback": 2290000,
+      "spotIdrGram": 2063794.0
+    },
+    {
+      "time": 1795256716,
       "sell": 2435000,
       "buyback": 2290000,
       "spotIdrGram": 2063794.0
