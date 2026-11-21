@@ -1,6 +1,6 @@
 {
-  "updatedAtWib": "2026-11-21 21:25:49 WIB",
-  "timestamp": 1795271149,
+  "updatedAtWib": "2026-11-22 01:15:43 WIB",
+  "timestamp": 1795284943,
   "spot": {
     "price": 3515.4,
     "changePct": -15.29,
@@ -14,12 +14,12 @@
     "source": "USD/IDR Otomatis"
   },
   "antam": {
-    "date": "2026-11-21",
+    "date": "2026-11-22",
     "sell": 2435000,
     "buyback": 2290000,
-    "prevDaySell": 2467000,
-    "changeIdr": -32000,
-    "changePct": -1.3,
+    "prevDaySell": 2435000,
+    "changeIdr": 0,
+    "changePct": 0.0,
     "spotIdrGram": 2063794.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
@@ -3300,6 +3300,12 @@
     },
     {
       "time": 1795271149,
+      "sell": 2435000,
+      "buyback": 2290000,
+      "spotIdrGram": 2063794.0
+    },
+    {
+      "time": 1795284943,
       "sell": 2435000,
       "buyback": 2290000,
       "spotIdrGram": 2063794.0
