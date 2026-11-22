@@ -1,6 +1,6 @@
 {
-  "updatedAtWib": "2026-11-22 17:24:04 WIB",
-  "timestamp": 1795343044,
+  "updatedAtWib": "2026-11-22 21:25:31 WIB",
+  "timestamp": 1795357531,
   "spot": {
     "price": 3515.4,
     "changePct": -13.42,
@@ -3330,6 +3330,12 @@
     },
     {
       "time": 1795343044,
+      "sell": 2435000,
+      "buyback": 2290000,
+      "spotIdrGram": 2063794.0
+    },
+    {
+      "time": 1795357531,
       "sell": 2435000,
       "buyback": 2290000,
       "spotIdrGram": 2063794.0
