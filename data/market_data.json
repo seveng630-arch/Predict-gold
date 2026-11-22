@@ -1,6 +1,6 @@
 {
-  "updatedAtWib": "2026-11-22 21:25:31 WIB",
-  "timestamp": 1795357531,
+  "updatedAtWib": "2026-11-23 01:16:11 WIB",
+  "timestamp": 1795371371,
   "spot": {
     "price": 3515.4,
     "changePct": -13.42,
@@ -9,24 +9,24 @@
     "source": "GitHub Actions \u00b7 Live Market Feed"
   },
   "fx": {
-    "rate": 18260.0,
-    "changePct": 0.21,
+    "rate": 18158.0,
+    "changePct": -0.35,
     "source": "USD/IDR Otomatis"
   },
   "antam": {
-    "date": "2026-11-22",
-    "sell": 2435000,
-    "buyback": 2290000,
+    "date": "2026-11-23",
+    "sell": 2421000,
+    "buyback": 2277000,
     "prevDaySell": 2435000,
-    "changeIdr": 0,
-    "changePct": 0.0,
-    "spotIdrGram": 2063794.0,
+    "changeIdr": -14000,
+    "changePct": -0.57,
+    "spotIdrGram": 2052265.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
     "dxy": {
-      "price": 103.84,
-      "changePct": 0.34,
+      "price": 103.81,
+      "changePct": 0.31,
       "suffix": "pts"
     },
     "wti": {
@@ -3339,6 +3339,12 @@
       "sell": 2435000,
       "buyback": 2290000,
       "spotIdrGram": 2063794.0
+    },
+    {
+      "time": 1795371371,
+      "sell": 2421000,
+      "buyback": 2277000,
+      "spotIdrGram": 2052265.0
     }
   ],
   "events": [
