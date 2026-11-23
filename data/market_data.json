@@ -1,11 +1,11 @@
 {
-  "updatedAtWib": "2026-11-23 21:42:30 WIB",
-  "timestamp": 1795444950,
+  "updatedAtWib": "2026-11-24 01:27:14 WIB",
+  "timestamp": 1795458434,
   "spot": {
-    "price": 3683.6,
-    "changePct": -8.09,
+    "price": 3653.9,
+    "changePct": -8.83,
     "high": 3691.0,
-    "low": 3502.9,
+    "low": 3503.8,
     "source": "GitHub Actions \u00b7 Live Market Feed"
   },
   "fx": {
@@ -14,70 +14,38 @@
     "source": "USD/IDR Otomatis"
   },
   "antam": {
-    "date": "2026-11-23",
-    "sell": 2537000,
-    "buyback": 2387000,
-    "prevDaySell": 2435000,
-    "changeIdr": 102000,
-    "changePct": 4.19,
-    "spotIdrGram": 2150459.0,
+    "date": "2026-11-24",
+    "sell": 2517000,
+    "buyback": 2368000,
+    "prevDaySell": 2537000,
+    "changeIdr": -20000,
+    "changePct": -0.79,
+    "spotIdrGram": 2133121.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
     "dxy": {
-      "price": 104.11,
-      "changePct": 0.24,
+      "price": 104.47,
+      "changePct": 0.59,
       "suffix": "pts"
     },
     "wti": {
-      "price": 81.94,
-      "changePct": -1.59,
+      "price": 81.1,
+      "changePct": -2.59,
       "suffix": "$/bbl"
     },
     "silver": {
-      "price": 43.85,
-      "changePct": -2.55,
+      "price": 43.16,
+      "changePct": -4.1,
       "suffix": "$/oz"
     },
     "yield": {
-      "price": 4.97,
-      "changePct": -2.61,
+      "price": 4.94,
+      "changePct": -3.19,
       "suffix": "%"
     }
   },
   "candles1h": [
-    {
-      "time": 1794358800,
-      "open": 4040.8,
-      "high": 4060.6,
-      "low": 4034.1,
-      "close": 4052.6,
-      "volume": 7691.0
-    },
-    {
-      "time": 1794362400,
-      "open": 4053.0,
-      "high": 4055.8,
-      "low": 4047.3,
-      "close": 4051.2,
-      "volume": 3050.0
-    },
-    {
-      "time": 1794366000,
-      "open": 4051.7,
-      "high": 4059.1,
-      "low": 4050.9,
-      "close": 4053.5,
-      "volume": 2801.0
-    },
-    {
-      "time": 1794369600,
-      "open": 4053.3,
-      "high": 4057.9,
-      "low": 4048.3,
-      "close": 4054.0,
-      "volume": 1861.0
-    },
     {
       "time": 1794373200,
       "open": 4054.5,
@@ -1635,15 +1603,47 @@
       "open": 3655.7,
       "high": 3691.0,
       "low": 3647.0,
-      "close": 3683.6,
-      "volume": 20589.0
+      "close": 3669.3,
+      "volume": 36389.0
     },
     {
-      "time": 1795444349,
-      "open": 3683.6,
-      "high": 3683.6,
-      "low": 3683.6,
-      "close": 3683.6,
+      "time": 1795446000,
+      "open": 3668.8,
+      "high": 3682.0,
+      "low": 3658.6,
+      "close": 3669.9,
+      "volume": 22456.0
+    },
+    {
+      "time": 1795449600,
+      "open": 3669.5,
+      "high": 3676.2,
+      "low": 3657.5,
+      "close": 3672.6,
+      "volume": 22387.0
+    },
+    {
+      "time": 1795453200,
+      "open": 3672.6,
+      "high": 3675.7,
+      "low": 3646.9,
+      "close": 3653.6,
+      "volume": 14495.0
+    },
+    {
+      "time": 1795456800,
+      "open": 3653.0,
+      "high": 3658.7,
+      "low": 3652.8,
+      "close": 3654.2,
+      "volume": 3013.0
+    },
+    {
+      "time": 1795457833,
+      "open": 3653.9,
+      "high": 3653.9,
+      "low": 3653.9,
+      "close": 3653.9,
       "volume": 0.0
     }
   ],
@@ -3245,8 +3245,8 @@
       "open": 3570.5,
       "high": 3691.0,
       "low": 3552.3,
-      "close": 3683.6,
-      "volume": 151847.0
+      "close": 3653.9,
+      "volume": 229721.0
     }
   ],
   "antamHistory": [
@@ -3375,27 +3375,15 @@
       "sell": 2537000,
       "buyback": 2387000,
       "spotIdrGram": 2150459.0
+    },
+    {
+      "time": 1795458434,
+      "sell": 2517000,
+      "buyback": 2368000,
+      "spotIdrGram": 2133121.0
     }
   ],
   "events": [
-    {
-      "time": 1795445100,
-      "impact": "medium",
-      "name": "[USD] Flash Manufacturing PMI",
-      "icon": "\u25a4",
-      "move": "Fcst: 54.5 | Prev: 56.0",
-      "forecast": "54.5",
-      "previous": "56.0"
-    },
-    {
-      "time": 1795445100,
-      "impact": "medium",
-      "name": "[USD] Flash Services PMI",
-      "icon": "\u25a4",
-      "move": "Fcst: 55.6 | Prev: 57.9",
-      "forecast": "55.6",
-      "previous": "57.9"
-    },
     {
       "time": 1795467600,
       "impact": "low",
@@ -3467,6 +3455,24 @@
       "move": "Fcst: 0.3% | Prev: 0.3%",
       "forecast": "0.3%",
       "previous": "0.3%"
+    },
+    {
+      "time": 1795613400,
+      "impact": "high",
+      "name": "[USD] Prelim GDP q/q",
+      "icon": "\u26a1",
+      "move": "Fcst: 3.5% | Prev: 3.4%",
+      "forecast": "3.5%",
+      "previous": "3.4%"
+    },
+    {
+      "time": 1795613400,
+      "impact": "medium",
+      "name": "[USD] Prelim GDP Price Index q/q",
+      "icon": "\u25a4",
+      "move": "Fcst: 2.3% | Prev: 2.3%",
+      "forecast": "2.3%",
+      "previous": "2.3%"
     }
   ]
 }
