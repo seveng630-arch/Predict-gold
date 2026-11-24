@@ -1,11 +1,11 @@
 {
-  "updatedAtWib": "2026-11-25 01:25:26 WIB",
-  "timestamp": 1795544726,
+  "updatedAtWib": "2026-11-25 05:32:05 WIB",
+  "timestamp": 1795559525,
   "spot": {
-    "price": 3561.9,
-    "changePct": -11.13,
+    "price": 3555.1,
+    "changePct": -11.3,
     "high": 3676.7,
-    "low": 3557.4,
+    "low": 3545.4,
     "source": "GitHub Actions \u00b7 Live Market Feed"
   },
   "fx": {
@@ -15,61 +15,37 @@
   },
   "antam": {
     "date": "2026-11-25",
-    "sell": 2450000,
-    "buyback": 2304000,
+    "sell": 2445000,
+    "buyback": 2300000,
     "prevDaySell": 2488000,
-    "changeIdr": -38000,
-    "changePct": -1.53,
-    "spotIdrGram": 2076320.0,
+    "changeIdr": -43000,
+    "changePct": -1.73,
+    "spotIdrGram": 2072356.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
     "dxy": {
-      "price": 103.79,
-      "changePct": -0.1,
+      "price": 103.84,
+      "changePct": -0.06,
       "suffix": "pts"
     },
     "wti": {
-      "price": 81.41,
-      "changePct": -2.16,
+      "price": 81.69,
+      "changePct": -1.83,
       "suffix": "$/bbl"
     },
     "silver": {
-      "price": 40.8,
-      "changePct": -7.95,
+      "price": 40.71,
+      "changePct": -8.14,
       "suffix": "$/oz"
     },
     "yield": {
       "price": 4.9,
-      "changePct": -3.24,
+      "changePct": -3.2,
       "suffix": "%"
     }
   },
   "candles1h": [
-    {
-      "time": 1794459600,
-      "open": 3981.0,
-      "high": 3988.2,
-      "low": 3974.6,
-      "close": 3986.7,
-      "volume": 3093.0
-    },
-    {
-      "time": 1794463200,
-      "open": 3984.4,
-      "high": 3986.3,
-      "low": 3967.7,
-      "close": 3971.1,
-      "volume": 4211.0
-    },
-    {
-      "time": 1794466800,
-      "open": 3970.7,
-      "high": 3978.0,
-      "low": 3960.6,
-      "close": 3970.5,
-      "volume": 6044.0
-    },
     {
       "time": 1794470400,
       "open": 3970.2,
@@ -1634,16 +1610,40 @@
       "time": 1795543200,
       "open": 3565.4,
       "high": 3568.4,
-      "low": 3560.9,
-      "close": 3561.9,
-      "volume": 2242.0
+      "low": 3551.9,
+      "close": 3554.5,
+      "volume": 11526.0
     },
     {
-      "time": 1795544125,
-      "open": 3561.9,
-      "high": 3561.9,
-      "low": 3561.9,
-      "close": 3561.9,
+      "time": 1795546800,
+      "open": 3554.1,
+      "high": 3563.8,
+      "low": 3553.4,
+      "close": 3555.4,
+      "volume": 3571.0
+    },
+    {
+      "time": 1795550400,
+      "open": 3555.8,
+      "high": 3557.3,
+      "low": 3545.4,
+      "close": 3551.5,
+      "volume": 5629.0
+    },
+    {
+      "time": 1795554000,
+      "open": 3551.4,
+      "high": 3555.2,
+      "low": 3548.3,
+      "close": 3555.1,
+      "volume": 1982.0
+    },
+    {
+      "time": 1795557597,
+      "open": 3555.1,
+      "high": 3555.1,
+      "low": 3555.1,
+      "close": 3555.1,
       "volume": 0.0
     }
   ],
@@ -3244,9 +3244,9 @@
       "time": 1795496400,
       "open": 3636.4,
       "high": 3676.7,
-      "low": 3557.4,
-      "close": 3561.9,
-      "volume": 197202.0
+      "low": 3545.4,
+      "close": 3555.1,
+      "volume": 217674.0
     }
   ],
   "antamHistory": [
@@ -3417,18 +3417,15 @@
       "sell": 2450000,
       "buyback": 2304000,
       "spotIdrGram": 2076320.0
+    },
+    {
+      "time": 1795559525,
+      "sell": 2445000,
+      "buyback": 2300000,
+      "spotIdrGram": 2072356.0
     }
   ],
   "events": [
-    {
-      "time": 1795555800,
-      "impact": "low",
-      "name": "[USD] API Weekly Statistical Bulletin",
-      "icon": "\u25c9",
-      "move": "Fluktuasi Ringan (\u00b10,05\u20130,35%)",
-      "forecast": "",
-      "previous": ""
-    },
     {
       "time": 1795613400,
       "impact": "high",
@@ -3509,6 +3506,15 @@
       "move": "Fcst: 650K | Prev: 676K",
       "forecast": "650K",
       "previous": "676K"
+    },
+    {
+      "time": 1795620600,
+      "impact": "low",
+      "name": "[USD] Crude Oil Inventories",
+      "icon": "\u25c9",
+      "move": "Fluktuasi Ringan (\u00b10,05\u20130,35%)",
+      "forecast": "",
+      "previous": "3.4M"
     }
   ]
 }
