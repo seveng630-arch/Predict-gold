@@ -1,11 +1,11 @@
 {
-  "updatedAtWib": "2026-11-24 09:36:10 WIB",
-  "timestamp": 1795487770,
+  "updatedAtWib": "2026-11-24 13:29:07 WIB",
+  "timestamp": 1795501747,
   "spot": {
-    "price": 3653.3,
-    "changePct": -8.85,
+    "price": 3623.2,
+    "changePct": -9.6,
     "high": 3691.0,
-    "low": 3588.2,
+    "low": 3599.9,
     "source": "GitHub Actions \u00b7 Live Market Feed"
   },
   "fx": {
@@ -15,28 +15,28 @@
   },
   "antam": {
     "date": "2026-11-24",
-    "sell": 2517000,
-    "buyback": 2367000,
+    "sell": 2496000,
+    "buyback": 2347000,
     "prevDaySell": 2537000,
-    "changeIdr": -20000,
-    "changePct": -0.79,
-    "spotIdrGram": 2132770.0,
+    "changeIdr": -41000,
+    "changePct": -1.62,
+    "spotIdrGram": 2115198.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
     "dxy": {
-      "price": 104.23,
-      "changePct": 0.36,
+      "price": 104.29,
+      "changePct": 0.37,
       "suffix": "pts"
     },
     "wti": {
-      "price": 79.93,
-      "changePct": -4.0,
+      "price": 79.7,
+      "changePct": -4.22,
       "suffix": "$/bbl"
     },
     "silver": {
-      "price": 43.03,
-      "changePct": -4.38,
+      "price": 42.03,
+      "changePct": -5.15,
       "suffix": "$/oz"
     },
     "yield": {
@@ -46,38 +46,6 @@
     }
   },
   "candles1h": [
-    {
-      "time": 1794398400,
-      "open": 4052.9,
-      "high": 4055.3,
-      "low": 4048.3,
-      "close": 4052.0,
-      "volume": 3485.0
-    },
-    {
-      "time": 1794402000,
-      "open": 4052.5,
-      "high": 4054.9,
-      "low": 4039.5,
-      "close": 4045.5,
-      "volume": 7571.0
-    },
-    {
-      "time": 1794405600,
-      "open": 4045.6,
-      "high": 4045.7,
-      "low": 4018.0,
-      "close": 4022.4,
-      "volume": 14206.0
-    },
-    {
-      "time": 1794409200,
-      "open": 4022.2,
-      "high": 4025.9,
-      "low": 4008.1,
-      "close": 4012.6,
-      "volume": 13603.0
-    },
     {
       "time": 1794412800,
       "open": 4012.3,
@@ -1476,7 +1444,7 @@
       "high": 3626.2,
       "low": 3604.6,
       "close": 3616.1,
-      "volume": 11300.0
+      "volume": 11415.0
     },
     {
       "time": 1795413600,
@@ -1612,7 +1580,7 @@
       "high": 3641.3,
       "low": 3618.5,
       "close": 3630.6,
-      "volume": 3030.0
+      "volume": 0.0
     },
     {
       "time": 1795478400,
@@ -1634,16 +1602,48 @@
       "time": 1795485600,
       "open": 3655.0,
       "high": 3659.7,
-      "low": 3643.8,
-      "close": 3654.0,
-      "volume": 4226.0
+      "low": 3635.5,
+      "close": 3639.3,
+      "volume": 8047.0
     },
     {
-      "time": 1795487167,
-      "open": 3653.3,
-      "high": 3653.3,
-      "low": 3653.3,
-      "close": 3653.3,
+      "time": 1795489200,
+      "open": 3639.5,
+      "high": 3641.6,
+      "low": 3627.8,
+      "close": 3632.0,
+      "volume": 4655.0
+    },
+    {
+      "time": 1795492800,
+      "open": 3631.4,
+      "high": 3632.5,
+      "low": 3627.9,
+      "close": 3630.2,
+      "volume": 558.0
+    },
+    {
+      "time": 1795496400,
+      "open": 3631.4,
+      "high": 3639.6,
+      "low": 3627.2,
+      "close": 3631.7,
+      "volume": 5410.0
+    },
+    {
+      "time": 1795500000,
+      "open": 3632.4,
+      "high": 3632.6,
+      "low": 3617.2,
+      "close": 3625.9,
+      "volume": 3248.0
+    },
+    {
+      "time": 1795501142,
+      "open": 3623.2,
+      "high": 3623.2,
+      "low": 3623.2,
+      "close": 3623.2,
       "volume": 0.0
     }
   ],
@@ -3241,12 +3241,12 @@
       "volume": 336479.0
     },
     {
-      "time": 1795487167,
+      "time": 1795496400,
       "open": 3636.4,
       "high": 3676.7,
-      "low": 3618.5,
-      "close": 3653.3,
-      "volume": 23586.0
+      "low": 3617.2,
+      "close": 3623.2,
+      "volume": 44968.0
     }
   ],
   "antamHistory": [
@@ -3393,6 +3393,12 @@
       "sell": 2517000,
       "buyback": 2367000,
       "spotIdrGram": 2132770.0
+    },
+    {
+      "time": 1795501747,
+      "sell": 2496000,
+      "buyback": 2347000,
+      "spotIdrGram": 2115198.0
     }
   ],
   "events": [
