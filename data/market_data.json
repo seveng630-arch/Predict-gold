@@ -1,83 +1,51 @@
 {
-  "updatedAtWib": "2026-11-24 17:30:45 WIB",
-  "timestamp": 1795516245,
+  "updatedAtWib": "2026-11-24 21:38:30 WIB",
+  "timestamp": 1795531110,
   "spot": {
-    "price": 3622.6,
-    "changePct": -9.61,
-    "high": 3691.0,
+    "price": 3617.0,
+    "changePct": -9.75,
+    "high": 3682.0,
     "low": 3606.4,
     "source": "GitHub Actions \u00b7 Live Market Feed"
   },
   "fx": {
-    "rate": 18158.0,
-    "changePct": 2.82,
+    "rate": 18131.0,
+    "changePct": 2.67,
     "source": "USD/IDR Otomatis"
   },
   "antam": {
     "date": "2026-11-24",
-    "sell": 2496000,
-    "buyback": 2347000,
+    "sell": 2488000,
+    "buyback": 2340000,
     "prevDaySell": 2537000,
-    "changeIdr": -41000,
-    "changePct": -1.62,
-    "spotIdrGram": 2114848.0,
+    "changeIdr": -49000,
+    "changePct": -1.93,
+    "spotIdrGram": 2108439.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
     "dxy": {
-      "price": 104.17,
-      "changePct": 0.26,
+      "price": 103.83,
+      "changePct": -0.07,
       "suffix": "pts"
     },
     "wti": {
-      "price": 80.12,
-      "changePct": -3.71,
+      "price": 81.26,
+      "changePct": -2.34,
       "suffix": "$/bbl"
     },
     "silver": {
-      "price": 41.85,
-      "changePct": -5.57,
+      "price": 42.09,
+      "changePct": -5.04,
       "suffix": "$/oz"
     },
     "yield": {
-      "price": 4.92,
-      "changePct": -3.63,
+      "price": 4.9,
+      "changePct": -3.28,
       "suffix": "%"
     }
   },
   "candles1h": [
-    {
-      "time": 1794427200,
-      "open": 3993.8,
-      "high": 3995.6,
-      "low": 3989.6,
-      "close": 3992.2,
-      "volume": 3223.0
-    },
-    {
-      "time": 1794430800,
-      "open": 3991.8,
-      "high": 3994.6,
-      "low": 3989.9,
-      "close": 3994.3,
-      "volume": 1670.0
-    },
-    {
-      "time": 1794438000,
-      "open": 3995.7,
-      "high": 3995.7,
-      "low": 3983.0,
-      "close": 3983.8,
-      "volume": 0.0
-    },
-    {
-      "time": 1794441600,
-      "open": 3984.1,
-      "high": 4000.7,
-      "low": 3973.5,
-      "close": 3999.7,
-      "volume": 6685.0
-    },
     {
       "time": 1794445200,
       "open": 3999.5,
@@ -1633,17 +1601,49 @@
     {
       "time": 1795514400,
       "open": 3621.1,
-      "high": 3624.1,
-      "low": 3617.9,
-      "close": 3621.9,
-      "volume": 1861.0
+      "high": 3629.0,
+      "low": 3616.6,
+      "close": 3629.0,
+      "volume": 6902.0
     },
     {
-      "time": 1795515641,
-      "open": 3622.6,
-      "high": 3622.6,
-      "low": 3622.6,
-      "close": 3622.6,
+      "time": 1795518000,
+      "open": 3628.6,
+      "high": 3636.9,
+      "low": 3622.5,
+      "close": 3635.1,
+      "volume": 8614.0
+    },
+    {
+      "time": 1795521600,
+      "open": 3635.0,
+      "high": 3651.4,
+      "low": 3620.9,
+      "close": 3641.0,
+      "volume": 11334.0
+    },
+    {
+      "time": 1795525200,
+      "open": 3640.9,
+      "high": 3641.4,
+      "low": 3613.0,
+      "close": 3613.6,
+      "volume": 27151.0
+    },
+    {
+      "time": 1795528800,
+      "open": 3613.5,
+      "high": 3621.5,
+      "low": 3612.0,
+      "close": 3618.8,
+      "volume": 8053.0
+    },
+    {
+      "time": 1795530509,
+      "open": 3617.0,
+      "high": 3617.0,
+      "low": 3617.0,
+      "close": 3617.0,
       "volume": 0.0
     }
   ],
@@ -3245,8 +3245,8 @@
       "open": 3636.4,
       "high": 3676.7,
       "low": 3606.4,
-      "close": 3622.6,
-      "volume": 72685.0
+      "close": 3617.0,
+      "volume": 132389.0
     }
   ],
   "antamHistory": [
@@ -3405,36 +3405,15 @@
       "sell": 2496000,
       "buyback": 2347000,
       "spotIdrGram": 2114848.0
+    },
+    {
+      "time": 1795531110,
+      "sell": 2488000,
+      "buyback": 2340000,
+      "spotIdrGram": 2108439.0
     }
   ],
   "events": [
-    {
-      "time": 1795526100,
-      "impact": "low",
-      "name": "[USD] ADP Weekly Employment Change",
-      "icon": "\u25c9",
-      "move": "Fluktuasi Ringan (\u00b10,05\u20130,35%)",
-      "forecast": "",
-      "previous": "23.8K"
-    },
-    {
-      "time": 1795528800,
-      "impact": "low",
-      "name": "[USD] HPI m/m",
-      "icon": "\u25c9",
-      "move": "Fcst: 0.2% | Prev: 0.3%",
-      "forecast": "0.2%",
-      "previous": "0.3%"
-    },
-    {
-      "time": 1795528800,
-      "impact": "low",
-      "name": "[USD] S&P/CS Composite-20 HPI y/y",
-      "icon": "\u25c9",
-      "move": "Fcst: 2.7% | Prev: 2.7%",
-      "forecast": "2.7%",
-      "previous": "2.7%"
-    },
     {
       "time": 1795532400,
       "impact": "medium",
@@ -3496,6 +3475,33 @@
       "icon": "\u25c9",
       "move": "Fcst: 0.5% | Prev: 0.5%",
       "forecast": "0.5%",
+      "previous": "0.5%"
+    },
+    {
+      "time": 1795613400,
+      "impact": "low",
+      "name": "[USD] Durable Goods Orders m/m",
+      "icon": "\u25c9",
+      "move": "Fcst: 0.7% | Prev: 1.8%",
+      "forecast": "0.7%",
+      "previous": "1.8%"
+    },
+    {
+      "time": 1795613400,
+      "impact": "low",
+      "name": "[USD] Personal Income m/m",
+      "icon": "\u25c9",
+      "move": "Fcst: 0.4% | Prev: 0.2%",
+      "forecast": "0.4%",
+      "previous": "0.2%"
+    },
+    {
+      "time": 1795613400,
+      "impact": "low",
+      "name": "[USD] Personal Spending m/m",
+      "icon": "\u25c9",
+      "move": "Fcst: 0.4% | Prev: 0.5%",
+      "forecast": "0.4%",
       "previous": "0.5%"
     }
   ]
