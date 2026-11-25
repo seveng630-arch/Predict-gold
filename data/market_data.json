@@ -1,83 +1,51 @@
 {
-  "updatedAtWib": "2026-11-25 17:36:01 WIB",
-  "timestamp": 1795602961,
+  "updatedAtWib": "2026-11-25 21:44:18 WIB",
+  "timestamp": 1795617858,
   "spot": {
-    "price": 3558.7,
-    "changePct": -11.88,
-    "high": 3651.4,
-    "low": 3511.3,
+    "price": 3493.1,
+    "changePct": -13.5,
+    "high": 3622.4,
+    "low": 3486.8,
     "source": "GitHub Actions \u00b7 Live Market Feed"
   },
   "fx": {
-    "rate": 18310.0,
-    "changePct": 3.81,
+    "rate": 18303.0,
+    "changePct": 3.77,
     "source": "USD/IDR Otomatis"
   },
   "antam": {
     "date": "2026-11-25",
-    "sell": 2472000,
-    "buyback": 2325000,
+    "sell": 2426000,
+    "buyback": 2281000,
     "prevDaySell": 2488000,
-    "changeIdr": -16000,
-    "changePct": -0.64,
-    "spotIdrGram": 2094935.0,
+    "changeIdr": -62000,
+    "changePct": -2.49,
+    "spotIdrGram": 2055531.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
     "dxy": {
-      "price": 104.0,
-      "changePct": 0.18,
+      "price": 103.93,
+      "changePct": 0.11,
       "suffix": "pts"
     },
     "wti": {
-      "price": 81.79,
-      "changePct": -2.61,
+      "price": 82.82,
+      "changePct": -1.38,
       "suffix": "$/bbl"
     },
     "silver": {
-      "price": 40.52,
-      "changePct": -1.27,
+      "price": 39.3,
+      "changePct": -4.23,
       "suffix": "$/oz"
     },
     "yield": {
-      "price": 4.9,
-      "changePct": -3.2,
+      "price": 4.83,
+      "changePct": -4.43,
       "suffix": "%"
     }
   },
   "candles1h": [
-    {
-      "time": 1794513600,
-      "open": 3889.0,
-      "high": 3891.1,
-      "low": 3877.8,
-      "close": 3879.5,
-      "volume": 4532.0
-    },
-    {
-      "time": 1794517200,
-      "open": 3879.6,
-      "high": 3882.7,
-      "low": 3876.9,
-      "close": 3881.7,
-      "volume": 1579.0
-    },
-    {
-      "time": 1794524400,
-      "open": 3882.5,
-      "high": 3889.9,
-      "low": 3879.1,
-      "close": 3884.7,
-      "volume": 0.0
-    },
-    {
-      "time": 1794528000,
-      "open": 3884.6,
-      "high": 3895.2,
-      "low": 3883.0,
-      "close": 3889.4,
-      "volume": 6417.0
-    },
     {
       "time": 1794531600,
       "open": 3889.4,
@@ -1635,15 +1603,47 @@
       "open": 3557.5,
       "high": 3565.0,
       "low": 3555.1,
-      "close": 3558.7,
-      "volume": 2362.0
+      "close": 3560.0,
+      "volume": 5535.0
     },
     {
-      "time": 1795602350,
-      "open": 3558.7,
-      "high": 3558.7,
-      "low": 3558.7,
-      "close": 3558.7,
+      "time": 1795604400,
+      "open": 3559.6,
+      "high": 3560.0,
+      "low": 3511.8,
+      "close": 3518.3,
+      "volume": 8380.0
+    },
+    {
+      "time": 1795608000,
+      "open": 3518.7,
+      "high": 3558.8,
+      "low": 3517.3,
+      "close": 3549.2,
+      "volume": 15187.0
+    },
+    {
+      "time": 1795611600,
+      "open": 3549.1,
+      "high": 3551.2,
+      "low": 3493.8,
+      "close": 3503.7,
+      "volume": 25435.0
+    },
+    {
+      "time": 1795615200,
+      "open": 3503.8,
+      "high": 3517.1,
+      "low": 3486.8,
+      "close": 3493.0,
+      "volume": 13120.0
+    },
+    {
+      "time": 1795617254,
+      "open": 3493.1,
+      "high": 3493.1,
+      "low": 3493.1,
+      "close": 3493.1,
       "volume": 0.0
     }
   ],
@@ -3243,10 +3243,10 @@
     {
       "time": 1795582800,
       "open": 3559.3,
-      "high": 3573.9,
-      "low": 3511.3,
-      "close": 3558.7,
-      "volume": 49350.0
+      "high": 3602.9,
+      "low": 3486.8,
+      "close": 3493.1,
+      "volume": 114698.0
     }
   ],
   "antamHistory": [
@@ -3441,90 +3441,15 @@
       "sell": 2472000,
       "buyback": 2325000,
       "spotIdrGram": 2094935.0
+    },
+    {
+      "time": 1795617858,
+      "sell": 2426000,
+      "buyback": 2281000,
+      "spotIdrGram": 2055531.0
     }
   ],
   "events": [
-    {
-      "time": 1795609500,
-      "impact": "low",
-      "name": "[USD] FOMC Member Bowman Speaks",
-      "icon": "\u25c9",
-      "move": "Fluktuasi Ringan (\u00b10,05\u20130,35%)",
-      "forecast": "",
-      "previous": ""
-    },
-    {
-      "time": 1795613400,
-      "impact": "high",
-      "name": "[USD] Core PCE Price Index m/m",
-      "icon": "\u26a1",
-      "move": "Fcst: 0.3% | Prev: 0.3%",
-      "forecast": "0.3%",
-      "previous": "0.3%"
-    },
-    {
-      "time": 1795613400,
-      "impact": "high",
-      "name": "[USD] Prelim GDP q/q",
-      "icon": "\u26a1",
-      "move": "Fcst: 3.5% | Prev: 3.4%",
-      "forecast": "3.5%",
-      "previous": "3.4%"
-    },
-    {
-      "time": 1795613400,
-      "impact": "medium",
-      "name": "[USD] Prelim GDP Price Index q/q",
-      "icon": "\u25a4",
-      "move": "Fcst: 2.3% | Prev: 2.3%",
-      "forecast": "2.3%",
-      "previous": "2.3%"
-    },
-    {
-      "time": 1795613400,
-      "impact": "low",
-      "name": "[USD] Core Durable Goods Orders m/m",
-      "icon": "\u25c9",
-      "move": "Fcst: 0.5% | Prev: 0.5%",
-      "forecast": "0.5%",
-      "previous": "0.5%"
-    },
-    {
-      "time": 1795613400,
-      "impact": "low",
-      "name": "[USD] Durable Goods Orders m/m",
-      "icon": "\u25c9",
-      "move": "Fcst: 0.7% | Prev: 1.8%",
-      "forecast": "0.7%",
-      "previous": "1.8%"
-    },
-    {
-      "time": 1795613400,
-      "impact": "low",
-      "name": "[USD] Personal Income m/m",
-      "icon": "\u25c9",
-      "move": "Fcst: 0.4% | Prev: 0.2%",
-      "forecast": "0.4%",
-      "previous": "0.2%"
-    },
-    {
-      "time": 1795613400,
-      "impact": "low",
-      "name": "[USD] Personal Spending m/m",
-      "icon": "\u25c9",
-      "move": "Fcst: 0.4% | Prev: 0.5%",
-      "forecast": "0.4%",
-      "previous": "0.5%"
-    },
-    {
-      "time": 1795613400,
-      "impact": "low",
-      "name": "[USD] Unemployment Claims",
-      "icon": "\u25c9",
-      "move": "Fcst: 201K | Prev: 203K",
-      "forecast": "201K",
-      "previous": "203K"
-    },
     {
       "time": 1795618800,
       "impact": "low",
@@ -3533,6 +3458,51 @@
       "move": "Fcst: 650K | Prev: 676K",
       "forecast": "650K",
       "previous": "676K"
+    },
+    {
+      "time": 1795620600,
+      "impact": "low",
+      "name": "[USD] Crude Oil Inventories",
+      "icon": "\u25c9",
+      "move": "Fcst: 2.0M | Prev: 3.4M",
+      "forecast": "2.0M",
+      "previous": "3.4M"
+    },
+    {
+      "time": 1795626000,
+      "impact": "low",
+      "name": "[USD] Natural Gas Storage",
+      "icon": "\u25c9",
+      "move": "Fcst: -19B | Prev: 20B",
+      "forecast": "-19B",
+      "previous": "20B"
+    },
+    {
+      "time": 1795633200,
+      "impact": "low",
+      "name": "[USD] Beige Book",
+      "icon": "\u25c9",
+      "move": "Fluktuasi Ringan (\u00b10,05\u20130,35%)",
+      "forecast": "",
+      "previous": ""
+    },
+    {
+      "time": 1795786200,
+      "impact": "low",
+      "name": "[USD] Goods Trade Balance",
+      "icon": "\u25c9",
+      "move": "Fcst: -135.9B | Prev: -134.9B",
+      "forecast": "-135.9B",
+      "previous": "-134.9B"
+    },
+    {
+      "time": 1795786200,
+      "impact": "low",
+      "name": "[USD] Prelim Wholesale Inventories m/m",
+      "icon": "\u25c9",
+      "move": "Fcst: 0.5% | Prev: 0.6%",
+      "forecast": "0.5%",
+      "previous": "0.6%"
     }
   ]
 }
