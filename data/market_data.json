@@ -1,9 +1,9 @@
 {
-  "updatedAtWib": "2026-11-27 01:22:32 WIB",
-  "timestamp": 1795717352,
+  "updatedAtWib": "2026-11-27 05:30:06 WIB",
+  "timestamp": 1795732206,
   "spot": {
-    "price": 3594.4,
-    "changePct": -10.99,
+    "price": 3593.4,
+    "changePct": -11.02,
     "high": 3634.7,
     "low": 3453.8,
     "source": "GitHub Actions \u00b7 Live Market Feed"
@@ -15,28 +15,28 @@
   },
   "antam": {
     "date": "2026-11-27",
-    "sell": 2498000,
-    "buyback": 2347000,
+    "sell": 2497000,
+    "buyback": 2346000,
     "prevDaySell": 2503000,
-    "changeIdr": -5000,
-    "changePct": -0.2,
-    "spotIdrGram": 2115141.0,
+    "changeIdr": -6000,
+    "changePct": -0.24,
+    "spotIdrGram": 2114553.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
     "dxy": {
-      "price": 103.79,
-      "changePct": -0.02,
+      "price": 103.78,
+      "changePct": -0.03,
       "suffix": "pts"
     },
     "wti": {
-      "price": 84.73,
-      "changePct": 0.89,
+      "price": 84.91,
+      "changePct": 1.11,
       "suffix": "$/bbl"
     },
     "silver": {
-      "price": 41.76,
-      "changePct": 1.75,
+      "price": 41.75,
+      "changePct": 1.74,
       "suffix": "$/oz"
     },
     "yield": {
@@ -3241,12 +3241,12 @@
       "volume": 221635.0
     },
     {
-      "time": 1795716738,
+      "time": 1795721399,
       "open": 3619.8,
       "high": 3634.7,
       "low": 3578.8,
-      "close": 3594.4,
-      "volume": 80555.0
+      "close": 3593.4,
+      "volume": 81328.0
     }
   ],
   "antamHistory": [
@@ -3489,6 +3489,12 @@
       "sell": 2498000,
       "buyback": 2347000,
       "spotIdrGram": 2115141.0
+    },
+    {
+      "time": 1795732206,
+      "sell": 2497000,
+      "buyback": 2346000,
+      "spotIdrGram": 2114553.0
     }
   ],
   "events": [
