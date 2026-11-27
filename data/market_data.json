@@ -1,47 +1,47 @@
 {
-  "updatedAtWib": "2026-11-27 17:31:42 WIB",
-  "timestamp": 1795775502,
+  "updatedAtWib": "2026-11-27 21:35:06 WIB",
+  "timestamp": 1795790106,
   "spot": {
-    "price": 3699.7,
-    "changePct": -8.39,
+    "price": 3665.5,
+    "changePct": -10.04,
     "high": 3634.7,
     "low": 3453.8,
     "source": "GitHub Actions \u00b7 Live Market Feed"
   },
   "fx": {
-    "rate": 18295.0,
-    "changePct": 0.05,
+    "rate": 18375.0,
+    "changePct": 0.49,
     "source": "USD/IDR Otomatis"
   },
   "antam": {
     "date": "2026-11-27",
-    "sell": 2571000,
-    "buyback": 2414000,
+    "sell": 2558000,
+    "buyback": 2402000,
     "prevDaySell": 2503000,
-    "changeIdr": 68000,
-    "changePct": 2.72,
-    "spotIdrGram": 2176154.0,
+    "changeIdr": 55000,
+    "changePct": 2.2,
+    "spotIdrGram": 2165466.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
     "dxy": {
-      "price": 103.86,
-      "changePct": 0.04,
+      "price": 103.96,
+      "changePct": -0.35,
       "suffix": "pts"
     },
     "wti": {
-      "price": 85.79,
-      "changePct": 2.16,
+      "price": 84.11,
+      "changePct": 4.91,
       "suffix": "$/bbl"
     },
     "silver": {
-      "price": 44.46,
-      "changePct": 8.35,
+      "price": 44.14,
+      "changePct": 2.3,
       "suffix": "$/oz"
     },
     "yield": {
-      "price": 4.85,
-      "changePct": -4.04,
+      "price": 4.9,
+      "changePct": -3.01,
       "suffix": "%"
     }
   },
@@ -3241,12 +3241,12 @@
       "volume": 124601.0
     },
     {
-      "time": 1795774895,
+      "time": 1795789504,
       "open": 3619.8,
       "high": 3711.9,
       "low": 3578.8,
-      "close": 3699.7,
-      "volume": 153058.0
+      "close": 3665.5,
+      "volume": 183838.0
     }
   ],
   "antamHistory": [
@@ -3513,6 +3513,12 @@
       "sell": 2571000,
       "buyback": 2414000,
       "spotIdrGram": 2176154.0
+    },
+    {
+      "time": 1795790106,
+      "sell": 2558000,
+      "buyback": 2402000,
+      "spotIdrGram": 2165466.0
     }
   ],
   "events": [
