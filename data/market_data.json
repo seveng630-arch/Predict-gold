@@ -1,6 +1,6 @@
 {
-  "updatedAtWib": "2026-11-28 09:34:20 WIB",
-  "timestamp": 1795833260,
+  "updatedAtWib": "2026-11-28 13:32:34 WIB",
+  "timestamp": 1795847554,
   "spot": {
     "price": 3668.5,
     "changePct": -9.46,
@@ -9,18 +9,18 @@
     "source": "GitHub Actions \u00b7 Live Market Feed"
   },
   "fx": {
-    "rate": 18375.0,
-    "changePct": 0.49,
+    "rate": 18295.0,
+    "changePct": 0.05,
     "source": "USD/IDR Otomatis"
   },
   "antam": {
     "date": "2026-11-28",
-    "sell": 2561000,
-    "buyback": 2404000,
+    "sell": 2550000,
+    "buyback": 2394000,
     "prevDaySell": 2558000,
-    "changeIdr": 3000,
-    "changePct": 0.12,
-    "spotIdrGram": 2167238.0,
+    "changeIdr": -8000,
+    "changePct": -0.31,
+    "spotIdrGram": 2157802.0,
     "source": "Kalibrasi Spot \u00d7 USD/IDR"
   },
   "macro": {
@@ -1608,35 +1608,35 @@
     },
     {
       "time": 1795789800,
-      "open": 3664.6,
+      "open": 3670.8,
       "high": 3672.5,
-      "low": 3650.6,
-      "close": 3655.6,
-      "volume": 14721.0
+      "low": 3651.9,
+      "close": 3664.4,
+      "volume": 13498.0
     },
     {
       "time": 1795793400,
-      "open": 3654.9,
-      "high": 3661.3,
+      "open": 3664.0,
+      "high": 3665.2,
       "low": 3642.7,
-      "close": 3652.9,
-      "volume": 8412.0
+      "close": 3654.1,
+      "volume": 10373.0
     },
     {
       "time": 1795797000,
-      "open": 3652.8,
-      "high": 3667.7,
-      "low": 3648.7,
-      "close": 3666.6,
-      "volume": 8114.0
+      "open": 3654.1,
+      "high": 3664.9,
+      "low": 3645.2,
+      "close": 3661.0,
+      "volume": 8752.0
     },
     {
       "time": 1795800600,
-      "open": 3667.0,
+      "open": 3660.7,
       "high": 3675.9,
       "low": 3655.0,
       "close": 3674.7,
-      "volume": 5114.0
+      "volume": 8607.0
     },
     {
       "time": 1795802400,
@@ -1644,7 +1644,7 @@
       "high": 3682.3,
       "low": 3666.2,
       "close": 3668.5,
-      "volume": 3802.0
+      "volume": 0.0
     }
   ],
   "candles1d": [
@@ -3242,11 +3242,11 @@
     },
     {
       "time": 1795789800,
-      "open": 3619.8,
-      "high": 3711.9,
-      "low": 3578.8,
-      "close": 3668.5,
-      "volume": 228331.0
+      "open": 3590.3,
+      "high": 3683.5,
+      "low": 3549.9,
+      "close": 3639.6,
+      "volume": 124601.0
     }
   ],
   "antamHistory": [
@@ -3537,6 +3537,12 @@
       "sell": 2561000,
       "buyback": 2404000,
       "spotIdrGram": 2167238.0
+    },
+    {
+      "time": 1795847554,
+      "sell": 2550000,
+      "buyback": 2394000,
+      "spotIdrGram": 2157802.0
     }
   ],
   "events": [
